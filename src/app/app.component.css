@@ -1,0 +1,20 @@
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+
+.container{
+    padding:10px;
+    box-shadow: 1px 1px 3px 1px black;
+    display:flex;
+    justify-content: center;
+    align-items:center ;
+    flex-direction: column;
+}
+.head,.head2{
+   
+    color:#ff4081;
+    text-align: center;
+}
+.rose{
+    background-color: #ff4081;
+    color: white;
+    border-radius: 3px;
+}

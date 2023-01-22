@@ -1,0 +1,45 @@
+
+<div class="container">
+  <h3 class="mat-headline-5 head">Login Form</h3>
+<form [formGroup]="loginForm">
+<mat-form-field appearance="outline" float="auto"color="accent">
+  <mat-label>Username</mat-label>
+  <input matInput type="text" #Input minlength="5" formControlName="Username">
+  <mat-hint align="end">Minimum 10 characters</mat-hint>
+</mat-form-field><br>
+
+<mat-form-field appearance="outline" float="auto" color="accent">
+  <mat-label>Password</mat-label>
+  <input matInput type="password" #Input maxlength="10" formControlName="Password">
+  <mat-hint align="end">Maximum 10 characters</mat-hint>
+</mat-form-field><br><br>
+
+<button mat-raised-button color="accent" (click)="onsubmit()">Submit</button>
+<!-- <button mat-raised-button color="accent" (click)="view()">View</button> -->
+</form>
+</div>
+
+
+<br><br>
+<div class="container">
+  <h2 class="head2">Login Customer Details</h2>
+  <table class="table table-hover  ">
+    <thead class="rose">
+      <tr >
+        <th>ID</th>
+        <th>Username</th>
+        <th>password</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor=" let datas of storage_list">
+        <td>{{datas.id}}</td>
+        <td>{{datas.Username}}</td>
+        <td>{{datas.Password}}</td>
+        <td><button mat-raised-button color="accent" (click)="delete(datas.id)">Delete</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
